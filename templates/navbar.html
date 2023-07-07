@@ -1,17 +1,29 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-transparent nav-down" color-on-scroll="500">
-    <div class="container">
-        <div class="navbar-translate">
-            <a class="navbar-brand" href="\" rel="tooltip" data-placement="bottom" target="_blank">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Bosh sahifa</a>
-            </li>
-        </ul>
-        </div>
-    </div>
+     {% load static %}
+      <!-- header -->
+         <!-- header inner -->
+<nav>
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row d_flex">
+                  <div class=" col-md-2 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="/"><img src="{% static 'images/logo.png' %}" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-md-10 col-sm-9">
+                     <ul class="site_menu text_align_right">
+                        <li >
+                           <button class="openbtn" onclick="openNav()"><img src="{% static 'images/menu_icon.png' %}"></button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
 </nav>
+         <!-- end header inner -->

@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Products{% endblock %}
+{% block head %}
+<style>
+.dropbtn {
+  background-color: rgb(20, 20, 165);
+  color: white;
+  padding-left: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(20, 20, 165);
+}
+
+    #header1 {
+      content: "";
+      background-color: rgb(20, 20, 139);
+      padding: 10px;
+      margin-top: 10px;
+      display: flex;
+      text-align: center;
+    }
+
+
+   p{
+    height:  50px;
+    font-size: 20px;
+    margin-left: 165px;
+   }
+
+   #main-content {
+      padding: 100px;
+      margin-left: 100px;
+   }
+
+
+.intro {
+  height: 100%;
+  margin-top: 50px;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+thead th {
+  color: #fff;
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.table-scroll {
+  border-radius: .5rem;
+}
+
+.table-scroll table thead th {
+  font-size: 1.25rem;
+}
+thead {
+  top: 0;
+  position: sticky;
+}
+
+</style>
+{% endblock %}
+{% block body %}
+<section>
+<div id="header1">
+  <div>
+    {% for category in categories %}
+    <div class="dropdown">
+        <h2 class="dropbtn">{{ category.name }}</h2>
+        <div class="dropdown-content">
+          {% for type in types %}
+            {% if 1 == 1 %}
+        <a href="#">{{ type.name }}</a>
+          {% else %}
+                  <a href="#">link1</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="container intro">
+  <div class="bg-image h-100" style="background-color: #f5f7fa;">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body p-0">
+                <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: auto">
+                  <table class="table table-striped mb-0">
+                    <thead style="background-color: #002d72;">
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Size</th>
+                        <th scope="col">Theory</th>
+                        <th scope="col">Manfacturer</th>
+                        <th scope="col">Unit</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for product in products %}
+                      <tr>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.size }}</td>
+                        <td>{{ product.theory }}</td>
+                        <td>{{ product.manfacturer }}</td>
+                        <td>{{ product.unit }}</td>
+                        <td>${{ product.price_cash }}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}

@@ -25,6 +25,7 @@ class Category(BaseModel):
 class Type(BaseModel):
     image = models.ImageField(upload_to='category/', blank=True, null=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    description = models.TextField(null=True, blank=True)
 
     @property
     def image_url(self):
