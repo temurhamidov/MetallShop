@@ -1,43 +1,190 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Home{% endblock %}
 
 {% block body %}
-<section class="bg-image"
-     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
-            height: 100vh" id="count-stats">
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-9 z-index-2 border-radius-xl mt-n8 mx-auto py-3 shadow-blur blur">
-            <div class="row">
-               <div class="col-md-4 position-relative">
-                  <div class="p-3 text-center">
-                     <h1 class="text-gradient text-primary"><span id="state1" countto="300">300</span>+</h1>
-                     <h5 class="mt-3">Coded Elements</h5>
+<!--- header -->
+<section>
+<header class="full_bg">
+         <section class="banner_main">
+            <div id="myCarousel" class="carousel slide banner" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="carousel-caption  banner_po">
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="build_box text_align_left">
+                                    <h1>WELCOME<br> <span class="white">METALS FACTORY</span></h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                    <a class="read_more conatct_btn" href="#contact" role="button">Contact now</a>
+                                    <a class="read_more conatct_btn" href="#about" role="button">About Factory</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <strong>best</strong>
+                        </div>
+                     </div>
                   </div>
-                  <hr class="vertical dark my-0">
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption banner_po">
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="build_box text_align_left">
+                                    <h1>WELCOME<br> <span class="white">METALS FACTORY</span></h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                    <a class="read_more conatct_btn" href="#contact" role="button">Contact now</a>
+                                    <a class="read_more conatct_btn" href="#about" role="button">About Factory</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <strong>best</strong>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption banner_po">
+                           <div class="row">
+                              <div class="col-md-8">
+                                 <div class="build_box text_align_left">
+                                    <h1>WELCOME<br> <span class="white">METALS FACTORY</span></h1>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                                    <a class="read_more conatct_btn" href="#contact" role="button">Contact now</a>
+                                    <a class="read_more conatct_btn" href="#about" role="button">About Factory</a>
+                                 </div>
+                              </div>
+                           </div>
+                           <strong>best</strong>
+                        </div>
+                     </div>
+                  </div>
                </div>
-            <div class="col-md-4 position-relative">
-         <div class="p-3 text-center">
-         <h1 class="text-gradient text-primary"> <span id="state2" countto="100">100</span>+</h1>
-         <h5 class="mt-3">Design Blocks</h5>
+               <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+               <i class="fa fa-angle-left" aria-hidden="true"></i>
+               <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+               <i class="fa fa-angle-right" aria-hidden="true"></i>
+               <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </section>
+      </header>
+      <!-- end banner -->
+   <!-- about -->
+      <div id="about" class="about">
+         <div class="bg_about">
+            <div class="container">
+               <div class="row d_flex">
+                  <div class="col-md-5">
+                     <div class="about_img">
+                        <figure><img src="{% static 'images/about.jpg' %}" alt="#"/></figure>
+                     </div>
+                  </div>
+                  <div class="col-md-6 offset-md-1">
+                     <div class="titlepage text_align_right">
+                        <h2>About of Factory</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur.
+                           natoque penatibus et magnis dis parturient montes, nascetur.
+                        </p>
+                        <a class="read_more" href="{% url 'mainapp:about' %}">About Us</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-      <hr class="vertical dark my-0">
-   </div>
-   <div class="col-md-4">
-      <div class="p-3 text-center">
-         <h1 class="text-gradient text-primary" id="state3" countto="39">39</h1>
-         <h5 class="mt-3">Pages</h5>
+      <!-- end about -->
+      <!-- products -->
+<section>
+      <div id="product" class="prot">
+         <div class="products">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="titlepage text_align_left">
+                        <h2>Metal Products</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+            <div class="row owl-carousel owl-theme ">
+         {% for type in types %}
+            <div class="product_data item container">
+                  <div class="card">
+                     <div class="card-body product mar_bottom30">
+                        <a href="{% url 'mainapp:products_type' type.slug %}">
+                           <div class="category-image">
+                              <img src="{{ type.image_url }}" alt="Product image" style="height: 16rem;">
+                           </div>
+                           <h3 class="text-center">{{ type.name }}</h3>
+                        </a>
+                     </div>
+                  </div>
+            </div>
+         {% endfor %}
+         </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12">
+                     <a class="read_more" href="{% url 'mainapp:products' %}">See More</a>
+                  </div>
+               </div>
+            </div>
+            </div>
+
+         </div>
       </div>
-      <hr class="vertical dark my-0">
-   </div>
-</section>
+   </section>
+      <!-- end products -->
+   <!--  contact -->
+      <div id="contact" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="bg_yeloow">
+                     <div class="titlepage text_align_center">
+                        <h2>Contact Us</h2>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                           <form id="request" class="main_form">
+                              <div class="row">
+                                 <div class="col-md-12 ">
+                                    <input class="contactus" placeholder="Name" type="type" name=" Name">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="Email" type="type" name="Email">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
+                                 </div>
+                                 <div class="col-md-12">
+                                    <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message</textarea>
+                                 </div>
+                                 <div class="col-md-12">
+                                    <button class="send_btn">Send</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
 
-<section>Asosiy malumotlar </section>
-
-<section>Metal mahsulotlari</section>
-
-<section>Ishlash tartibi</section>
-
-<section>Hamkorlar</section>
 {% endblock %}
+</section>
